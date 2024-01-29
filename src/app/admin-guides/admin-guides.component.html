@@ -1,0 +1,43 @@
+<app-sidebar></app-sidebar>
+<div class="content">
+  <section class="container mt-5 " *ngIf="guides">
+  <h2 class="mb-4">Guides List</h2>
+
+  <!-- Table -->
+  <table class="table table-bordered table-hover">
+    <thead class="thead-dark">
+      <tr>
+        <th>Full Name</th>
+        <th>Email</th>
+        <th>Date Of Birth</th>
+        <th>Phone Number</th>
+        <th>Profession</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let guide of guides">
+        <td>{{ guide.firstName+" "+guide.lastName}}</td>
+        <td>{{ guide.email }}</td>
+        <td>{{ guide.dateOfBirth | date:'yyyy-MM-dd' }}</td>
+        <td>{{ guide.mobileNumber }}</td>
+        <td>{{ guide.profession }}</td>
+        <td>
+          <a class=" mr-4 ml-3" routerLink="editGuide/{{guide.id}}" ><i class="fas fa-edit" style="color:rgb(0, 140, 255); width: 18px;"></i></a>
+          <a class="" (click)="deleteGuide(guide.id)" ><i class="fas fa-trash" style="color: red; cursor: pointer;"></i></a>
+
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <button type="button" class="button" (click)="route('/addGuide')">
+    <span class="button__text">Add Guide</span>
+    <span class="button__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" height="24" fill="none" class="svg"><line y2="19" y1="5" x2="12" x1="12"></line><line y2="12" y1="12" x2="19" x1="5"></line></svg></span>
+  </button>
+
+
+</section>
+</div>
+

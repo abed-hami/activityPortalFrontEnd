@@ -1,0 +1,42 @@
+<app-sidebar></app-sidebar>
+<div class="content">
+  <section class="container mt-5 " *ngIf="members">
+  <h2 class="mb-4">Members List</h2>
+
+  <!-- Table -->
+  <table class="table table-bordered table-hover">
+    <thead class="thead-dark">
+      <tr>
+        <th>Full Name</th>
+        <th>Email</th>
+        <th>Date Of Birth</th>
+        <th>Phone Number</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let member of members">
+        <td>{{ member.firstName }} {{member.lastName}}</td>
+        <td>{{ member.email }}</td>
+        <td>{{ member.dateOfBirth | date:'yyyy-MM-dd' }}</td>
+        <td>{{ member.mobileNumber }}</td>
+        <td>
+
+          <a class=" mr-4 ml-3" routerLink="editMember/{{member.id}}">
+            <i class="fas fa-edit" style="color:rgb(0, 140, 255); width: 18px;"></i>
+          </a>
+
+          <a class="mr-2" (click)="deleteMember(member.id)">
+            <i class="fas fa-trash" style="color: red; cursor: pointer;"></i>
+          </a>
+
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+
+</section>
+</div>
+

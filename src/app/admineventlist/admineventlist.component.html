@@ -1,0 +1,57 @@
+<app-sidebar></app-sidebar>
+<div class="content">
+  <section class="container mt-5 " *ngIf="allEvents">
+  <h2 class="mb-4">Events List</h2>
+
+  <!-- Table -->
+  <table class="table table-bordered table-hover">
+    <thead class="thead-dark">
+      <tr>
+        <th>Name</th>
+        <th>Destination</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+        <th>Price</th>
+        <th>Status</th>
+        <th>Guides</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let event of allEvents">
+        <td>{{ event.name }}</td>
+        <td>{{ event.destination }}</td>
+        <td>{{ event.startDate | date:'yyyy-MM-dd' }}</td>
+        <td>{{ event.endDate | date:'yyyy-MM-dd' }}</td>
+        <td>{{ event.cost }}$</td>
+        <td>{{event.status}}</td>
+        <td >
+          <ng-container *ngFor="let g of guides">
+           <ng-container *ngIf="g.eventId==event.id">
+              {{g.guideFirstName}},
+           </ng-container>
+          </ng-container>
+
+
+
+        </td>
+        <td>
+          <a class="ml-3 mr-4" routerLink="editEvent/{{event.id}}" ><i class="fas fa-edit" style="color:rgb(0, 140, 255); width: 18px;"></i></a>
+          <a class="mr-4" (click)="deletEvent(event.id)" ><i class="fas fa-trash" style="color: red; cursor: pointer;"></i></a>
+          <a class="" routerLink="assignGuide/{{event.id}}" >
+            <i class="fas fa-plus-circle" style="color: green; cursor: pointer;"></i>
+
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+<button type="button" class="button" (click)="navigateTo('/addEvent')">
+  <span class="button__text">Add Event</span>
+  <span class="button__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" height="24" fill="none" class="svg"><line y2="19" y1="5" x2="12" x1="12"></line><line y2="12" y1="12" x2="19" x1="5"></line></svg></span>
+</button>
+</section>
+</div>
+

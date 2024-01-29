@@ -1,0 +1,149 @@
+<section class="vh-130 gradient-custom">
+  <div class="container py-5 h-80">
+    <div class="row justify-content-center align-items-center h-100">
+      <div class="col-12 col-lg-9 col-xl-7">
+        <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+          <div class="card-body p-4 p-md-5">
+            <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Registration Form</h3>
+            <form #addMemberForm="ngForm" (ngSubmit)="addMember(addMemberForm.value)">
+
+
+              <div class="row" >
+                <div class="col-md-6 mb-4">
+
+                  <div class="form-outline">
+                    <input type="text" id="firstName" class="form-control form-control-lg" name="FirstName" ngModel />
+                    <label class="form-label" for="firstName" >First Name</label>
+                  </div>
+
+                </div>
+                <div class="col-md-6 mb-4">
+
+                  <div class="form-outline">
+                    <input type="text" id="lastName" class="form-control form-control-lg" name="LastName" ngModel />
+                    <label class="form-label" for="lastName">Last Name</label>
+                  </div>
+
+                </div>
+              </div>
+              <div class="row">
+                              <div class="col-md-6 mb-4 pb-2">
+
+                                <div class="form-outline">
+                                  <input type="email" id="emailAddress" class="form-control form-control-lg" name="Email" ngModel  />
+                                  <label class="form-label" for="emailAddress">Email</label>
+                                </div>
+
+                              </div>
+                              <div class="col-md-6 mb-4 pb-2">
+
+                                <div class="form-outline">
+                                  <input type="password" id="Password" class="form-control form-control-lg" name="Password" ngModel/>
+                                  <label class="form-label" for="phoneNumber">Password</label>
+                                </div>
+
+                              </div>
+                            </div>
+              <div class="row">
+                <div class="col-md-6 mb-4 d-flex align-items-center">
+
+                  <div class="form-outline datepicker w-100">
+                    <input type="date" class="form-control form-control-lg" id="birthdayDate" name="DateOfBirth" ngModel />
+                    <label for="birthdayDate" class="form-label">Birthday</label>
+                  </div>
+
+                </div>
+                <div class="col-md-6 mb-4 pb-2">
+
+                  <label class="gender-label">
+                    <input type="radio" name="gender" value="M" class="gender-input" >
+                    Male
+                  </label>
+
+
+                  <span class="mr-5"></span>
+
+                  <label class="gender-label">
+                    <input type="radio" name="gender" value="F" class="gender-input">
+                    Female
+                  </label>
+
+                </div>
+              </div>
+
+
+
+              <div class="row">
+                <div class="col-md-6 mb-4 pb-2">
+
+                  <div class="form-outline">
+                    <input type="text" id="Phone" class="form-control form-control-lg" name="MobileNumber" ngModel />
+                    <label class="form-label" for="Password">Mobile</label>
+                  </div>
+
+                </div>
+                <div class="col-md-6 mb-4 pb-2">
+
+                  <div class="form-outline">
+                    <input type="file" id="photo" class="form-control form-control-lg" name="Photo" ngModel />
+                    <label class="form-label" for="photo">Photo</label>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-6 mb-4 pb-2">
+
+                  <select class="select form-control-lg" name="Profession" ngModel >
+                    <option value="1" disabled>Profession</option>
+                    <option value="skiing">Skiing</option>
+                    <option value="hiking">Hiking</option>
+                    <option value="surfing">Surfing</option>
+                    <option value="camping">Camping</option>
+                  </select>
+                  <label class="form-label select-label">Choose profession</label>
+
+                </div>
+
+                <div class="col-6 mb-4 pb-2">
+
+                  <select class="select form-control-lg" name="Nationality" ngModel >
+                    <option value="1" disabled>Nationality</option>
+                    <option value="lebanese">Lebanese</option>
+                    <option value="Syrian">Syrian</option>
+                    <option value="Palestinian">Palestinian</option>
+                    <option value="Jordanian">Jordanian</option>
+                  </select>
+                  <label class="form-label select-label">Choose Nationality</label>
+
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6  pb-2">
+
+                  <div class="form-outline">
+                    <input type="text" id="EmergencyNumber" class="form-control form-control-lg" name="EmergencyNumber" ngModel />
+                    <label class="form-label" for="EmergencyNumber">Emergency Number</label>
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div class="mt-4 pt-2 text-center mb-2">
+                <input class="btn btn-primary btn-lg" type="submit" value="Create Account" />
+              </div>
+
+              <div>
+                <p class="small text-center">Already have an account?<a href="/login" class="text-reset"> Login here</a></p>
+              </div>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,74 @@
+
+ <section class="vh-130 gradient-custom">
+  <div class="container py-5 h-100">
+    <div class="row justify-content-center align-items-center h-100">
+      <div class="col-12 col-lg-9 col-xl-7">
+        <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+          <div class="card-body p-4 p-md-5">
+            <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Add User Form</h3>
+            <form action="" #addUserForm="ngForm" (ngSubmit)="addUser(addUserForm.value)">
+
+              <div class="row">
+                <div class="col-md-6 mb-4">
+
+                  <div class="form-outline">
+                    <input type="text" id="FisrtName" class="form-control form-control-lg" name="FisrtName" ngModel [required]="true" autocomplete="off" placeholder="FirstName"/>
+                    <label class="form-label" for="firstName" >First Name</label>
+                  </div>
+
+                </div>
+                <div class="col-md-6 mb-4">
+
+                  <div class="form-outline">
+                    <input type="text" id="LastName" class="form-control form-control-lg" name="LastName" ngModel [required]="true" autocomplete="off" placeholder="LastName">
+                    <label class="form-label" for="LastName">Last Name</label>
+                  </div>
+
+                </div>
+              </div>
+              <div class="row">
+                              <div class="col-md-6 mb-4 pb-2">
+
+                                <div class="form-outline">
+                                  <input type="date" id="DateOfBirth" class="form-control form-control-lg" name="DateOfBirth" ngModel [required]="true" autocomplete="off" placeholder="DateOfBirth" />
+                                  <label class="form-label" for="DateOfBirth">Date Of Birth</label>
+                                </div>
+
+                              </div>
+                              <div class="col-md-6 mb-4 pb-2">
+
+                                <div class="form-outline">
+                                  <input type="email" id="Email" class="form-control form-control-lg" name="Email" ngModel [required]="true" autocomplete="off" placeholder="Email"/>
+                                  <label class="form-label" for="StartDate">Email</label>
+                                </div>
+
+                              </div>
+                            </div>
+              <div class="row">
+                <div class="col-md-6 mb-4 d-flex align-items-center">
+
+                  <div class="form-outline datepicker w-100">
+                    <input type="password" class="form-control form-control-lg" id="EndDate" name="Password" ngModel [required]="true" autocomplete="off" placeholder="Password"/>
+                    <label for="birthdayDate" class="form-label">Password</label>
+                  </div>
+
+                </div>
+
+              </div>
+
+
+
+
+
+
+              <div class="mt-4 pt-2">
+                <input class="btn btn-primary btn-lg" type="submit" value="Submit" />
+              </div>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

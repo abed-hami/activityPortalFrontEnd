@@ -1,0 +1,52 @@
+<section class="vh-20 gradient-custom">
+
+  <div class="container py-5 h-50">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+
+      <div class="col-12 col-md-8 col-lg-4 col-xl-5">
+        <div class="card  text-white" style="border-radius: 1rem;">
+          <h4 class="pl-3 pt-2 back"><a href="" routerLink="/">X</a></h4>
+          <div class="card-body p-5 text-center">
+
+            <div class="mb-md-3 mt-md-4 pb-3">
+
+              <form action="" #loginForm="ngForm" (ngSubmit)="login(loginForm.value)">
+
+                <h2 class="fw-bold mb-2 text-uppercase">Login</h2>
+              <p class="text-white-50 mb-5">Please enter your login and password!</p>
+
+              <div class="form-outline form-white mb-5">
+                <input type="email" id="Email" class="form-control form-control-lg" name="Email" ngModel [required]="true" autocomplete="off" placeholder="Email" required="true" />
+
+              </div>
+
+              <div class="form-outline form-white mb-5">
+                <input type="password" id="Password" class="form-control form-control-lg" name="Password" ngModel [required]="true" autocomplete="off" placeholder="Password"/>
+
+              </div>
+
+
+
+              <button class="btn btn-outline-light btn-lg px-5" type="submit" (click)="clearFields()">Login</button>
+              </form>
+
+
+              <div class="form-outline form-white mb-1 mt-2" *ngIf="!user && !member">
+               <p class="text-danger">User Not Found!</p>
+              </div>
+
+
+
+            </div>
+
+            <div>
+              <p class="mb-0">Don't have an account? <a href="/signup" class="text-white-50 fw-bold">Sign Up</a>
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,27 @@
+<app-navbar></app-navbar>
+<section style="background-color: black; height: 13vh;">
+
+</section>
+
+
+<section class="container mt-5">
+  <div class="card event-details-card">
+    <div class="card-body">
+      <h2 class="card-title text-center mb-4" style="font-size: 2.5rem;">{{eventById.name}}</h2>
+      <p class="card-text mb-2" style="font-size: 1.2rem;">{{ eventById.description }}</p>
+
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"><strong>Destination:</strong> {{ eventById.destination }}</li>
+        <li class="list-group-item"><strong>Start Date:</strong> {{ eventById.startDate  }}</li>
+        <li class="list-group-item"><strong>End Date:</strong> {{ eventById.endDate  }}</li>
+        <li class="list-group-item"><strong>Cost:</strong> {{ eventById.cost }}$</li>
+        <li class="list-group-item"><strong>Status:</strong> {{ eventById.status }}</li>
+      </ul>
+
+      <div class="mt-4 text-center">
+        <button class="btn btn-primary" (click)="reserve()">Reserve Now</button>
+      </div>
+    </div>
+  </div>
+</section>
+

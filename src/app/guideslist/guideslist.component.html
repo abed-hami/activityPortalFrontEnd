@@ -1,0 +1,35 @@
+<app-navbar></app-navbar>
+<section style="background-color: #011324; height: 13vh;">
+
+</section>
+<section class="bg-light py-3 py-md-5 py-xl-8 mb-5">
+  <div class="container">
+    <div class="row justify-content-md-center">
+      <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
+        <h2 class="mb-4 display-5 text-center">Our Guides</h2>
+        <p class="text-secondary mb-5 text-center lead fs-4">We are a group of innovative, experienced, and proficient guides. We will love to guide you on your journey.</p>
+        <hr class="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle">
+      </div>
+    </div>
+  </div>
+
+  <div class="container overflow-hidden" >
+    <div class="row gy-4 gy-lg-0 gx-xxl-5">
+      <div class="col-12 col-md-6 col-lg-3" *ngFor="let guide of guides">
+        <div class="card border-0 border-bottom border-primary shadow-sm overflow-hidden mb-4">
+          <div class="card-body p-0">
+            <figure class="m-0 p-0">
+              <img class="img-fluid" loading="lazy" src="assets/homepage_assets/img/image/profile.jpg" alt="">
+              <figcaption class="m-0 p-4">
+                <h6 class="mb-1">{{guide.firstName}} {{guide.lastName}}</h6>
+                <p class="text-secondary mb-0">{{guide.profession}}</p>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<app-footer></app-footer>

@@ -1,0 +1,145 @@
+<!-- <section class="vh-20 gradient-custom">
+
+  <div class="container py-5 h-50">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+
+      <div class="col-12 col-md-8 col-lg-4 col-xl-5">
+        <div class="card bg-dark text-white" style="border-radius: 1rem;">
+          <h4 class="pl-3 pt-2 back"><a href="" routerLink="/users">X</a></h4>
+          <div class="card-body p-5 text-center">
+
+            <div class="mb-md-3 mt-md-4 pb-3" >
+
+              <form action="" #editUserForm="ngForm" (ngSubmit)="editUser(editUserForm.value)">
+
+                <h2 class="fw-bold mb-4 text-uppercase">Edit User</h2>
+
+                <div class="form-outline form-white mb-3" style="display:none">
+                  <input type="text" id="Id" class="form-control form-control-lg" name="Id" ngModel [required]="true" autocomplete="off" placeholder="Id" [(ngModel)]="userId.id" />
+                </div>
+
+                <div class="form-outline form-white mb-3">
+                  <input type="text" id="FirstName" class="form-control form-control-lg" name="FisrtName" ngModel [required]="true" autocomplete="off" placeholder="FirstName" [(ngModel)]="userId.fisrtName"/>
+
+                </div>
+
+                <div class="form-outline form-white mb-3">
+                  <input type="text" id="lastName" class="form-control form-control-lg" name="lastName" ngModel [required]="true" autocomplete="off" placeholder="Description" [(ngModel)]="userId.lastName"/>
+
+                </div>
+
+
+
+                <div class="form-outline form-white mb-3">
+                  <input type="date" id="DateOfBirth" class="form-control form-control-lg" name="DateOfBirth" ngModel [required]="true" autocomplete="off" placeholder="DateOfBirth" [(ngModel)]="dob" />
+
+                </div>
+
+
+
+              <div class="form-outline form-white mb-3">
+                <input type="text" id="email" class="form-control form-control-lg" name="email" ngModel [required]="true" autocomplete="off" placeholder="Cost" [(ngModel)]="userId.email"/>
+
+              </div>
+
+              <div class="form-outline form-white mb-3">
+                <input type="password" id="password" class="form-control form-control-lg" name="password" ngModel [required]="true" autocomplete="off" placeholder="Cost" [(ngModel)]="userId.password"/>
+
+              </div>
+
+
+
+
+
+              <button class="btn btn-outline-light btn-lg px-5" type="submit" >Edit Event</button>
+              </form>
+
+
+
+
+            </div>
+
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+<section class="vh-130 gradient-custom">
+  <div class="container py-5 h-100">
+    <div class="row justify-content-center align-items-center h-100">
+      <div class="col-12 col-lg-9 col-xl-7">
+        <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+          <div class="card-body p-4 p-md-5">
+            <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">User Edit Form</h3>
+            <form action="" #editUserForm="ngForm" (ngSubmit)="editUser(editUserForm.value)">
+              <div class="form-outline form-white mb-3" style="display:none">
+                <input type="text" id="Id" class="form-control form-control-lg" name="Id" ngModel [required]="true" autocomplete="off" placeholder="Id" [(ngModel)]="userId.id" />
+              </div>
+              <div class="row">
+                <div class="col-md-6 mb-4">
+
+                  <div class="form-outline">
+                    <input type="text" id="FisrtName" class="form-control form-control-lg" name="FisrtName" ngModel [required]="true" autocomplete="off" placeholder="FirstName" [(ngModel)]="userId.fisrtName"/>
+                    <label class="form-label" for="firstName" >First Name</label>
+                  </div>
+
+                </div>
+                <div class="col-md-6 mb-4">
+
+                  <div class="form-outline">
+                    <input type="text" id="LastName" class="form-control form-control-lg" name="LastName" ngModel [required]="true" autocomplete="off" placeholder="LastName" [(ngModel)]="userId.lastName">
+                    <label class="form-label" for="LastName">Last Name</label>
+                  </div>
+
+                </div>
+              </div>
+              <div class="row">
+                              <div class="col-md-6 mb-4 pb-2">
+
+                                <div class="form-outline">
+                                  <input type="date" id="DateOfBirth" class="form-control form-control-lg" name="DateOfBirth" ngModel [required]="true" autocomplete="off" placeholder="DateOfBirth" [(ngModel)]="userId.dateOfBirth" />
+                                  <label class="form-label" for="DateOfBirth">Date Of Birth</label>
+                                </div>
+
+                              </div>
+                              <div class="col-md-6 mb-4 pb-2">
+
+                                <div class="form-outline">
+                                  <input type="email" id="Email" class="form-control form-control-lg" name="Email" ngModel [required]="true" autocomplete="off" placeholder="Email" [(ngModel)]="userId.email"/>
+                                  <label class="form-label" for="StartDate">Email</label>
+                                </div>
+
+                              </div>
+                            </div>
+              <div class="row">
+                <div class="col-md-6 mb-4 d-flex align-items-center">
+
+                  <div class="form-outline datepicker w-100">
+                    <input type="password" class="form-control form-control-lg" id="EndDate" name="Password" ngModel [required]="true" autocomplete="off" placeholder="Password" [(ngModel)]="userId.password"/>
+                    <label for="birthdayDate" class="form-label">Password</label>
+                  </div>
+
+                </div>
+
+              </div>
+
+
+
+
+
+
+              <div class="mt-4 pt-2">
+                <input class="btn btn-primary btn-lg" type="submit" value="Submit" />
+              </div>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

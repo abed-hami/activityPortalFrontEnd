@@ -1,0 +1,136 @@
+<app-sidebar></app-sidebar>
+<div class="content">
+
+  <section class="vh-130 gradient-custom">
+    <div class="container py-5 h-100">
+      <div class="row justify-content-center align-items-center h-100">
+        <div class="col-12 col-lg-9 col-xl-7">
+          <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+            <div class="card-body p-4 p-md-5">
+              <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Website Information</h3>
+              <form #editForm="ngForm" (ngSubmit)="editInfo(editForm.value)">
+
+                <div class="row id" >
+                  <div class="col-md-6 mb-4">
+
+                    <div class="form-outline">
+                      <input type="text" id="id" class="form-control form-control-lg" name="id" ngModel [(ngModel)]="info.id"/>
+                      <label class="form-label" for="id" >id</label>
+                    </div>
+
+                  </div>
+                </div>
+
+
+                <div class="row" >
+
+                  <div class="col-md-12 mb-4">
+
+                    <div class="form-outline">
+                      <textarea name="about" id="about" cols="60" rows="5" class="form-control form-control-lg" [(ngModel)]="info.about"></textarea>
+                      <label class="form-label" for="about" >about us</label>
+                    </div>
+
+                  </div>
+                  <div class="col-md-12 mb-4">
+
+                    <div class="form-outline">
+                      <textarea name="main" id="main" cols="60" rows="5" class="form-control form-control-lg" [(ngModel)]="info.main"></textarea>
+                      <label class="form-label" for="main">home text</label>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="row" >
+                  <div class="col-md-12 mb-4">
+
+                    <div class="form-outline">
+                      <input type="text" id="address" class="form-control form-control-lg" name="address" ngModel [(ngModel)]="info.address"/>
+                      <label class="form-label" for="address" >address</label>
+                    </div>
+
+                  </div>
+                  <div class="col-md-12 mb-4">
+
+                    <div class="form-outline">
+                      <input type="text" id="phone" class="form-control form-control-lg" name="phone" ngModel [(ngModel)]="info.phone" />
+                      <label class="form-label" for="phone">phone</label>
+                    </div>
+
+                  </div>
+                  <div class="col-md-12 mb-4">
+
+                    <div class="form-outline">
+                      <input type="text" id="email" class="form-control form-control-lg" name="email" ngModel [(ngModel)]="info.email"/>
+                      <label class="form-label" for="email">email</label>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12 mb-4 pb-2">
+
+                    <div class="form-outline">
+                      <textarea name="service1" id="service1" cols="60" rows="5" class="form-control form-control-lg" [(ngModel)]="info.service1"></textarea>
+                      <label class="form-label" for="service1">Service 1</label>
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <div class="row">
+                  <div class="col-12 mb-4 pb-2">
+
+                    <div class="form-outline">
+                      <textarea name="service2" id="service2" cols="60" rows="5" class="form-control form-control-lg" [(ngModel)]="info.service2"></textarea>
+                      <label class="form-label" for="service2">Service 2</label>
+                    </div>
+
+                  </div>
+
+                </div>
+
+
+
+                <div class="row">
+                  <div class="col-12 mb-4 pb-2">
+
+                    <div class="form-outline">
+                      <textarea name="service3" id="service3" cols="60" rows="5" class="form-control form-control-lg" [(ngModel)]="info.service3"></textarea>
+                      <label class="form-label" for="service3">Service 3</label>
+                    </div>
+
+                  </div>
+
+                </div>
+                <div class="row">
+                  <div class="col-12 mb-4 pb-2">
+
+                    <div class="form-outline">
+                      <textarea name="service4" id="service4" cols="60" rows="5" class="form-control form-control-lg" [(ngModel)]="info.service4"></textarea>
+                      <label class="form-label" for="service4">Service 4</label>
+                    </div>
+
+                  </div>
+
+                </div>
+
+
+
+
+
+                <div class="mt-4 pt-2">
+                  <input class="btn btn-primary btn-lg" type="submit" value="Edit" />
+                </div>
+
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+</div>

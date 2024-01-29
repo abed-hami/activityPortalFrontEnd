@@ -1,0 +1,39 @@
+.gradient-custom {
+  /* fallback for old browsers */
+
+
+  /* Chrome 10-25, Safari 5.1-6 */
+  background-color: rgb(240, 146, 58);
+
+
+
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  }
+
+  .back a{
+    text-decoration: none ;
+    color: white;
+
+  }
+
+  .card-registration .select-input.form-control[readonly]:not([disabled]) {
+  font-size: 1rem;
+  line-height: 2.15;
+  padding-left: .75em;
+  padding-right: .75em;
+  }
+  .card-registration .select-arrow {
+  top: 13px;
+  }
+.id{
+  display:none
+}
+
+.gender-input {
+  transform: scale(1.5); /* Adjust the scale factor as needed to make it bigger */
+   /* Adjust margin as needed */
+}
+

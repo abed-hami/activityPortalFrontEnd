@@ -1,0 +1,288 @@
+<app-navbar></app-navbar>
+<section style="background-color: #000000d5; height: 13vh"></section>
+
+<div class="container mt-5">
+  <div class="main-body">
+    <!-- Breadcrumb -->
+
+    <!-- /Breadcrumb -->
+
+    <div class="row gutters-sm">
+      <div class="col-md-4 mb-3">
+        <div class="card">
+          <div class="card-body">
+            <div class="d-flex flex-column align-items-center text-center">
+              <img
+                src="https://bootdey.com/img/Content/avatar/avatar7.png"
+                alt="Admin"
+                class="rounded-circle"
+                width="150"
+              />
+              <div class="mt-3">
+                <h4>{{ members.firstName }} {{ members.lastName }}</h4>
+                <p class="text-secondary mb-1">{{ members.profession }}</p>
+
+                <div class="logout-btn" (click)="logout()">
+                  <i class="fas fa-sign-out-alt"></i> Logout
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card mt-3 joined">
+          <h4 class="pt-2 text-center color">Events Joined</h4>
+          <ul class="list-group list-group-flush">
+            <div *ngFor="let j of joined">
+              <li
+                class="list-group-item d-flex justify-content-between align-items-center flex-wrap"
+              >
+                <span class="text-secondary pr-2"
+                  >{{ j.eventName }}
+                  {{
+                    j.eventEndDate | date : "yyyy-MM-dd"
+                  }}</span
+                >
+                <span><a class="mr-2" (click)="DeleteJoinedEvent(j.reservationId)">
+                  <i class="fas fa-trash" style="color: red; cursor: pointer;"></i>
+                </a></span>
+              </li>
+            </div>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div class="card mb-3">
+          <form
+            action=""
+            #editMemberForm="ngForm"
+            (ngSubmit)="editMember(editMemberForm.value)"
+            [autocomplete]="false"
+          >
+            <div class="card-body">
+              <div class="row hide">
+                <div class="col-sm-3">
+                  <h6 class="mb-0">Id</h6>
+                </div>
+                <div class="col-sm-9 text-secondary">
+                  <input
+                    type="text"
+                    style="background: transparent; border: none"
+                    [(ngModel)]="members.id"
+                    class=""
+                    name="id"
+                    id="id"
+                  />
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-3">
+                  <h6 class="mb-0">First Name</h6>
+                </div>
+                <div class="col-sm-9 text-secondary">
+                  <input
+                    type="text"
+                    style="background: transparent; border: none"
+                    [(ngModel)]="members.firstName"
+                    name="firstname"
+                    id="firstName"
+                    autocomplete="false"
+                  />
+                </div>
+              </div>
+              <hr />
+              <div class="row">
+                <div class="col-sm-3">
+                  <h6 class="mb-0">Last Name</h6>
+                </div>
+                <div class="col-sm-9 text-secondary">
+                  <input
+                    type="text"
+                    style="background: transparent; border: none"
+                    [(ngModel)]="members.lastName"
+                    name="lastName"
+                    id="lastName"
+                    autocomplete="false"
+                  />
+                </div>
+              </div>
+              <hr />
+              <div class="row">
+                <div class="col-sm-3">
+                  <h6 class="mb-0">Email</h6>
+                </div>
+                <div class="col-sm-9 text-secondary">
+                  <input
+                    type="email"
+                    style="background: transparent; border: none"
+                    [(ngModel)]="members.email"
+                    name="email"
+                    id="email"
+                    [autocomplete]="false"
+                  />
+                </div>
+              </div>
+              <hr />
+              <div class="row">
+                <div class="col-sm-3">
+                  <h6 class="mb-0">Password</h6>
+                </div>
+                <div class="col-sm-9 text-secondary">
+                  <input
+                    [type]="type"
+                    style="background: transparent; border: none"
+                    [(ngModel)]="members.password"
+                    name="password"
+                    id="password"
+                    [autocomplete]="false"
+                  />
+
+                  <a (click)="show()" class="eye"><i [ngClass]="class"></i></a>
+                </div>
+              </div>
+              <hr />
+              <div class="row">
+                <div class="col-sm-3">
+                  <h6 class="mb-0">Date Of Birth</h6>
+                </div>
+                <div class="col-sm-9 text-secondary">
+                  <input
+                    type="date"
+                    style="background: transparent; border: none"
+                    [(ngModel)]="members.dateOfBirth"
+                    name="DateOfBirth"
+                    id="DateOfBirtn"
+                    [autocomplete]="false"
+                  />
+                  {{ members.dateOfBirth | date }}
+                </div>
+              </div>
+              <hr />
+              <div class="row">
+                <div class="col-sm-3">
+                  <h6 class="mb-0">Gender</h6>
+                </div>
+                <div class="col-sm-9 text-secondary">
+                  <label class="">
+                    <input
+                      type="radio"
+                      name="gender"
+                      value="M"
+                      [(ngModel)]="members.gender"
+                      name="gender"
+                      id="gender"
+                      [autocomplete]="false"
+                    />
+                    Male
+                  </label>
+
+                  <span class="mr-5"></span>
+
+                  <label>
+                    <input
+                      type="radio"
+                      name="gender2"
+                      value="F"
+                      [(ngModel)]="members.gender"
+                      name="gender"
+                      id="gender"
+                      [autocomplete]="false"
+                    />
+                    Female
+                  </label>
+                </div>
+              </div>
+              <hr />
+
+              <div class="row">
+                <div class="col-sm-3">
+                  <h6 class="mb-0">Mobile</h6>
+                </div>
+                <div class="col-sm-9 text-secondary">
+                  <input
+                    type="text"
+                    style="background: transparent; border: none"
+                    [(ngModel)]="members.mobileNumber"
+                    name="MobileNumber"
+                    id="MobileNumber"
+                    [autocomplete]="false"
+                  />
+                </div>
+              </div>
+              <hr />
+
+              <div class="row">
+                <div class="col-sm-3">
+                  <h6 class="mb-0">Photo</h6>
+                </div>
+                <div class="col-sm-9 text-secondary">
+                  <input
+                    type="file"
+                    [(ngModel)]="members.photo"
+                    class=""
+                    name="photo"
+                    id="photo"
+                  />
+                </div>
+              </div>
+              <hr />
+              <div class="row">
+                <div class="col-sm-3">
+                  <h6 class="mb-0">Profession</h6>
+                </div>
+                <div class="col-sm-9 text-secondary">
+                  <input
+                    type="text"
+                    style="background: transparent; border: none"
+                    [(ngModel)]="members.profession"
+                    class=""
+                    name="Profession"
+                    id="Profession"
+                    [autocomplete]="false"
+                  />
+                </div>
+              </div>
+              <hr />
+              <div class="row">
+                <div class="col-sm-3">
+                  <h6 class="mb-0">Nationality</h6>
+                </div>
+                <div class="col-sm-9 text-secondary">
+                  <input
+                    type="text"
+                    style="background: transparent; border: none"
+                    [(ngModel)]="members.nationality"
+                    class=""
+                    name="nationality"
+                    id="nationality"
+                    autocomplete="false"
+                  />
+                </div>
+              </div>
+              <hr />
+              <div class="row">
+                <div class="col-sm-3">
+                  <h6 class="mb-0">Emergency Number</h6>
+                </div>
+                <div class="col-sm-9 text-secondary">
+                  <input
+                    type="text"
+                    style="background: transparent; border: none"
+                    [(ngModel)]="members.emergencyNumber"
+                    class=""
+                    name="EmergencyNumber"
+                    id="EmergencyNumber"
+                    [autocomplete]="false"
+                  />
+                </div>
+              </div>
+              <hr />
+              <div class="row text-center">
+                <button type="submit" class="btn btn-info">edit</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

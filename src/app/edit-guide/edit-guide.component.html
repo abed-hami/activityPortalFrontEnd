@@ -1,0 +1,157 @@
+<section class="vh-130 gradient-custom">
+  <div class="container py-5 h-100">
+    <div class="row justify-content-center align-items-center h-100">
+      <div class="col-12 col-lg-9 col-xl-7">
+        <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
+          <div class="card-body p-4 p-md-5">
+            <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Guide Edit Form</h3>
+            <form #addUserForm="ngForm" (ngSubmit)="editGuide(addUserForm.value)">
+
+              <div class="row id" >
+                <div class="col-md-6 mb-4">
+
+                  <div class="form-outline" style="display:none">
+                    <input type="text" id="Id" class="form-control form-control-lg" name="Id" ngModel [(ngModel)]="guideById.id"/>
+                    <label class="form-label" for="id" >id</label>
+                  </div>
+
+                </div>
+
+              </div>
+              <div class="row" >
+                <div class="col-md-6 mb-4">
+
+                  <div class="form-outline">
+                    <input type="text" id="firstName" class="form-control form-control-lg" name="FirstName" ngModel [(ngModel)]="guideById.firstName"/>
+                    <label class="form-label" for="firstName" >First Name</label>
+                  </div>
+
+                </div>
+                <div class="col-md-6 mb-4">
+
+                  <div class="form-outline">
+                    <input type="text" id="lastName" class="form-control form-control-lg" name="LastName" ngModel [(ngModel)]="guideById.lastName"/>
+                    <label class="form-label" for="lastName">Last Name</label>
+                  </div>
+
+                </div>
+              </div>
+              <div class="row">
+                              <div class="col-md-6 mb-4 pb-2">
+
+                                <div class="form-outline">
+                                  <input type="email" id="emailAddress" class="form-control form-control-lg" name="Email" ngModel [(ngModel)]="guideById.email" />
+                                  <label class="form-label" for="emailAddress">Email</label>
+                                </div>
+
+                              </div>
+                              <div class="col-md-6 mb-4 pb-2">
+
+                                <div class="form-outline">
+                                  <input type="password" id="Password" class="form-control form-control-lg" name="Password" ngModel [(ngModel)]="guideById.password"/>
+                                  <label class="form-label" for="phoneNumber">Password</label>
+                                </div>
+
+                              </div>
+                            </div>
+              <div class="row">
+                <div class="col-md-6 mb-4 d-flex align-items-center">
+
+                  <div class="form-outline datepicker w-100">
+                    <input type="date" class="form-control form-control-lg" id="birthdayDate" name="DateOfBirth" ngModel [(ngModel)]="guideById.dateOfBirth"/>
+                    <label for="birthdayDate" class="form-label">Birthday</label>
+                  </div>
+
+                </div>
+
+                <div class="col-md-6 mb-4 pb-2">
+
+                  <label class="gender-label">
+                    <input type="radio" name="gender" value="M" [(ngModel)]="guideById.gender" class="gender-input" >
+                    Male
+                  </label>
+
+
+                  <span class="mr-5"></span>
+
+                  <label class="gender-label">
+                    <input type="radio" name="gender" value="F" [(ngModel)]="guideById.gender" class="gender-input">
+                    Female
+                  </label>
+
+
+                </div>
+              </div>
+
+
+
+              <div class="row">
+                <div class="col-md-6 mb-4 pb-2">
+
+                  <div class="form-outline">
+                    <input type="text" id="Phone" class="form-control form-control-lg" name="MobileNumber" ngModel [(ngModel)]="guideById.mobileNumber"/>
+                    <label class="form-label" for="Password">Mobile</label>
+                  </div>
+
+                </div>
+                <div class="col-md-6 mb-4 pb-2">
+
+                  <div class="form-outline">
+                    <input type="file" id="photo" class="form-control form-control-lg" name="Photo" ngModel [(ngModel)]="guideById.photo"/>
+                    <label class="form-label" for="photo">Photo</label>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-6 mb-4 pb-2">
+
+                  <select class="select form-control-lg" name="Profession" ngModel [(ngModel)]="guideById.profession">
+                    <option value="1" disabled>Profession</option>
+                    <option value="skiing">Skiing</option>
+                    <option value="hiking">Hiking</option>
+                    <option value="surfing">Surfing</option>
+                    <option value="camping">Camping</option>
+                  </select>
+                  <label class="form-label select-label">Choose profession</label>
+
+                </div>
+
+                <div class="col-6 mb-4 pb-2">
+
+                  <select class="select form-control-lg" name="Nationality" ngModel [(ngModel)]="guideById.nationality">
+                    <option value="1" disabled>Nationality</option>
+                    <option value="lebanese">Lebanese</option>
+                    <option value="Syrian">Syrian</option>
+                    <option value="Palestinian">Palestinian</option>
+                    <option value="Jordanian">Jordanian</option>
+                  </select>
+                  <label class="form-label select-label">Choose Nationality</label>
+
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6  pb-2">
+
+                  <div class="form-outline">
+                    <input type="text" id="EmergencyNumber" class="form-control form-control-lg" name="EmergencyNumber" ngModel [(ngModel)]="guideById.emergencyNumber"/>
+                    <label class="form-label" for="EmergencyNumber">Emergency Number</label>
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div class="mt-4 pt-2">
+                <input class="btn btn-primary btn-lg" type="submit" value="Edit" />
+              </div>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

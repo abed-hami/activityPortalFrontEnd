@@ -1,0 +1,39 @@
+<app-sidebar></app-sidebar>
+<div class="content">
+  <section class="container mt-5 " *ngIf="users">
+  <h2 class="mb-4">Users List</h2>
+
+  <!-- Table -->
+  <table class="table table-bordered table-hover">
+    <thead class="thead-dark">
+      <tr>
+        <th>Full Name</th>
+        <th>Date Of Birth</th>
+        <th>Email</th>
+
+        <th>Action</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let user of users">
+
+        <td>{{ user.fisrtName }} {{ user.lastName  }}</td>
+
+        <td>{{ user.dateOfBirth | date:'yyyy-MM-dd'}}</td>
+        <td>{{user.email}}</td>
+        <td>
+          <a class="ml-3 mr-4" routerLink="editUser/{{user.id}}" ><i class="fas fa-edit" style="color:rgb(0, 140, 255); width: 18px;"></i></a>
+          <a class="" (click)="deleteUser(user.id)" ><i class="fas fa-trash" style="color: red; cursor: pointer;"></i></a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+<button type="button" class="button" (click)="navigateTo('/addU')">
+  <span class="button__text">Add User</span>
+  <span class="button__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" height="24" fill="none" class="svg"><line y2="19" y1="5" x2="12" x1="12"></line><line y2="12" y1="12" x2="19" x1="5"></line></svg></span>
+</button>
+</section>
+</div>
+

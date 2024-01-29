@@ -1,0 +1,28 @@
+<div class="sidebar open">
+  <div class="user mb-3" >
+    <div>
+      <i class="fas fa-user pr-2 pl-2"></i>
+      {{username}}
+    </div>
+
+  </div>
+  <div class="brand">
+    <h1 class="text-white">EventScape</h1>
+  </div>
+
+
+
+  <ul>
+    <li (click)="navigateTo('/dashboard')">Dashboard</li>
+    <li (click)="navigateTo('/adminEvents')">Events</li>
+    <li (click)="navigateTo('/users')">Users</li>
+    <li (click)="navigateTo('/guides')">Guides</li>
+    <li (click)="navigateTo('/members')">Members</li>
+    <li (click)="navigateTo('/websiteInfo')">Website</li>
+  </ul>
+
+
+  <div class="logout-btn" (click)="logout()">
+    <i class="fas fa-sign-out-alt"></i> Logout
+  </div>
+</div>

@@ -1,0 +1,21 @@
+
+.gradient-custom {
+  /* fallback for old browsers */
+
+
+  /* Chrome 10-25, Safari 5.1-6 */
+  background-color: rgb(240, 146, 58);
+
+
+
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  }
+
+  .back a{
+    text-decoration: none ;
+    color: white;
+
+  }
